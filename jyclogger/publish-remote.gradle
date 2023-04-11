@@ -1,0 +1,49 @@
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                // The coordinates of the library, being set from variables that
+                // we'll setup later
+                groupId PUBLISH_GROUP_ID
+                artifactId PUBLISH_ARTIFACT_ID
+                version PUBLISH_VERSION
+
+                from components.release
+
+                // Mostly self-explanatory metadata
+                pom {
+                    name = PUBLISH_ARTIFACT_ID
+                    description = "This is a logger for android using WorkManager to check and upload log\""
+                    url = 'https://github.com/ChinaCoolder/JYCAndroidLogger'
+                    licenses {
+                        license {
+                            name = 'MIT license'
+                            url = 'https://opensource.org/licenses/MIT'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'jiayichi'
+                            name = 'JiaYiChi'
+                            email = 'jiayichi.me@foxmail.com'
+                        }
+                    }
+
+                    // Version control info
+                    scm {
+                        connection = 'scm:git:ssh://git@github.com:ChinaCoolder/JYCAndroidLogger.git'
+                        developerConnection = 'scm:git:ssh://git@github.com:ChinaCoolder/JYCAndroidLogger.git'
+                        url = 'https://github.com/ChinaCoolder/JYCAndroidLogger'
+                    }
+                }
+            }
+        }
+    }
+}
+
+signing {
+    sign publishing.publications
+}
