@@ -16,6 +16,8 @@ interface ISave {
      * provide log entity to upload
      *
      * @param context application context
+     *
+     * @return the log stored
      */
     fun provide(context: Context): List<LogEntity>
 
@@ -23,6 +25,8 @@ interface ISave {
      * provide log count to check is log should be upload
      *
      * @param context application context
+     *
+     * @return the log count
      */
     fun provideCount(context: Context): Int
 
@@ -35,6 +39,8 @@ interface ISave {
 
     /**
      * provide the timestamp(millisecond) of last time upload
+     *
+     * @return the last time upload time
      */
     fun provideUploadTime(context: Context): Long
 

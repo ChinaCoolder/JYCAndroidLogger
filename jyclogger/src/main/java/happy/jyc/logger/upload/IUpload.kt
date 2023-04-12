@@ -9,6 +9,8 @@ interface IUpload {
      *
      * @param ctx application context
      * @param logs the log list waiting for upload
+     *
+     * @return true if these log upload success, otherwise false
      */
     fun upload(ctx: Context, logs: List<LogEntity>): Boolean
 }
