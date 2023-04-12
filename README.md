@@ -2,9 +2,9 @@ JYCAndroidLogger
 ======
 Are you looking for a logger can modify upload process by yourself? well today is your lucky day.  
 
-> **warning: logger is base on [WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager "WorkManager Definition")**
+> **warning: JYCAndroidLogger is base on [WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager)**
 >
-> the logger is base on WorkManager, so some device(most of them is chinese phone) won't work correctly
+> JYCAndroidLogger is base on WorkManager, so some device(most of them is chinese phone) won't work correctly, you can check [Don'tKillMyApp](https://dontkillmyapp.com/)
 
 Last Version
 --------
