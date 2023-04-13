@@ -2,7 +2,7 @@ JYCAndroidLogger
 ======
 Are you looking for a logger can modify upload process by yourself? well today is your lucky day.  
 
-> **warning: JYCAndroidLogger is base on [WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager)**
+> **Warning: JYCAndroidLogger is base on [WorkManager](https://developer.android.com/topic/libraries/architecture/workmanager)**
 >
 > JYCAndroidLogger is base on WorkManager, so some device(most of them is chinese phone) won't work correctly, you can check [Don'tKillMyApp](https://dontkillmyapp.com/)
 
@@ -57,7 +57,7 @@ JYCLogger.Builder(applicationContext, Upload::class.java)
 
 JYCLogger.Builder(applicationContext, Upload::class.java)
     .policy(
-        TimePolicy.hours(1)// this means The log upload interval should not be less than 1 day
+        TimePolicy.days(1)// this means The log upload interval should not be less than 1 day
     )
     .build()
 
